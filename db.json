@@ -1,0 +1,128 @@
+{
+  "tutors": [
+    {
+      "id": 1,
+      "name": "Carlos Silva",
+      "email": "carlos@email.com",
+      "phone": "11999999999"
+    },
+    {
+      "id": 2,
+      "name": "Ana Souza",
+      "email": "ana@email.com",
+      "phone": "11888888888"
+    },
+    {
+      "name": "Pikachu",
+      "species": "Ovelha",
+      "age": "4",
+      "tutorId": "1",
+      "id": 3
+    }
+  ],
+  "pets": [
+    {
+      "name": "Dino",
+      "species": "dog",
+      "age": 5,
+      "tutorId": 1,
+      "id": 1
+    },
+    {
+      "name": "Bela",
+      "species": "dog",
+      "age": "6",
+      "tutorId": "1",
+      "id": 11
+    },
+    {
+      "name": "Pikachu",
+      "species": "Ovelha",
+      "age": "4",
+      "tutorId": "1",
+      "id": 12
+    },
+    {
+      "name": "Maylon",
+      "species": "Cachorro",
+      "age": "4",
+      "tutorId": "2",
+      "id": 13
+    },
+    {
+      "name": "Pedro",
+      "species": "Gato",
+      "age": "45",
+      "tutorId": "2",
+      "id": 15
+    },
+    {
+      "name": "Carlos",
+      "species": "DOg",
+      "age": "85",
+      "tutorId": "2",
+      "id": 16
+    },
+    {
+      "name": "REX",
+      "species": "dog",
+      "age": "5",
+      "tutorId": "1",
+      "id": 17
+    },
+    {
+      "name": "Dino",
+      "species": "dog",
+      "age": "5",
+      "tutorId": "1",
+      "id": 18
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Ração Premium",
+      "price": 50,
+      "category": "Alimento",
+      "stock": 20
+    },
+    {
+      "id": 2,
+      "name": "Coleira Antipulgas",
+      "price": 30,
+      "category": "Acessório",
+      "stock": 15
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Banho e Tosa",
+      "price": 80,
+      "duration": "1h",
+      "description": "Higiene completa"
+    },
+    {
+      "id": 2,
+      "name": "Consulta Veterinária",
+      "price": 120,
+      "duration": "30min",
+      "description": "Avaliação geral"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "tutorId": 1,
+      "petId": 1,
+      "products": [
+        1
+      ],
+      "services": [
+        1
+      ],
+      "total": 130,
+      "status": "Finalizado"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <form id="form" class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">pets</i>
+            <input id="name" name="name" type="text" class="validate">
+            <label class="active" for="name">Nome do Pet</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">android</i>
+            <input id="species" name="species" type="tel" class="validate"> <label for="icon_telephone">Espécie</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">android</i>
+            <input id="age" name="age" type="tel" class="validate"> <label for="icon_telephone">Idade</label>
+          </div>
+          <div class="input-field col s6">
+            <label>Tutor</label><br>
+            <select name="tutorId" id="tutor-list" class="browser-default"> </select> 
+          </div>
+          <div class="input-field col s6">
+            <a onclick="salvar()" id="btn-save" class="waves-effect waves-light btn"><i class="material-icons left">send</i>Enviar</a>
+            <a onclick="atualizar()" id="btn-update" class="waves-effect waves-light btn"><i class="material-icons left">save</i>Atualizar</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+              <th>Nome</th>
+              <th>Espécie<tutor/th>
+              <th>Idade</th>
+              <th>Tutor</th>
+              <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody id="lista-pet">
+          
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "products": [
+      { "id": 1, "name": "Pizza Margherita", "price": 40.0, "size": "Média", "category": "Tradicional" },
+      { "id": 2, "name": "Pizza Calabresa", "price": 45.0, "size": "Grande", "category": "Tradicional" }
+    ],
+    "clients": [
+      { "id": 1, "name": "João Pereira", "email": "joao@email.com", "phone": "11912345678" },
+      { "id": 2, "name": "Maria Oliveira", "email": "maria@email.com", "phone": "11987654321" }
+    ],
+    "orders": [
+      { "id": 1, "clientId": 1, "products": [1], "total": 40.0, "status": "Entregue" },
+      { "id": 2, "clientId": 2, "products": [2], "total": 45.0, "status": "Em preparo" }
+    ]
+  }
