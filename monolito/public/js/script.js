@@ -1,6 +1,7 @@
 url = "https://effective-space-parakeet-6q6qqgw9vp9c49xg-3000.app.github.dev/"
 $(document).ready(() => {
     $("#btn-update").hide()
+    $("#form").hide()
 
     fetch(url+"tutors")
         .then((res) => {
@@ -27,6 +28,7 @@ function salvar(){
         pet[key] = value
     }
 
+    delete pet.idPet
     fetch(url+"pets",{
         method: "POST",
         headers: {'content-Type': 'application/json'},
@@ -36,6 +38,34 @@ function salvar(){
     })
     .then((data)=>{
         listarPets()
+        limparForm()
+        $("#form").hide()
+        $("#table").show()
+    })
+}
+
+function atualizar(){
+    const form = document.getElementById("form");
+    const formData = new FormData(form);
+    pet = {}
+    for (const [key, value] of formData) {
+        pet[key] = value
+    }
+
+    fetch(url+"pets"+"/"+pet.idPet,{
+        method: "PATCH",
+        headers: {'content-Type': 'application/json'},
+        body: JSON.stringify(pet)
+    }).then((res)=>{
+        return res.json()
+    })
+    .then((data)=>{
+        listarPets()
+        $("#btn-update").hide()
+        $("#btn-save").show()
+        limparForm()
+        $("#form").hide()
+        $("#table").show()
     })
 }
 
@@ -74,6 +104,7 @@ function deletarPet(id){
 }
 
 function editarPet(id){
+    mostrarForm()
     $("#btn-update").show()
     $("#btn-save").hide()
     fetch(url+"pets"+"/"+id,{
@@ -82,9 +113,26 @@ function editarPet(id){
         return res.json()
     }).then((pet)=>{
         console.log("o pet veio", pet)
+        $("#idPet").val(pet.id)
+
         $("#name").val(pet.name)
         $("#species").val(pet.species)
         $("#age").val(pet.age)
         $("#tutor-list").val(pet.tutorId)
     })
+}
+
+function limparForm(){
+    $("#idPet").val(pet.id)
+
+        $("#name").val("")
+        $("#species").val("")
+        $("#age").val("")
+        $("#tutor-list").val(1)
+}
+
+
+function mostrarForm(){
+    $("#form").show()
+    $("#table").hide()
 }
